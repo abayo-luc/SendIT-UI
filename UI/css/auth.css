@@ -1,0 +1,23 @@
+.auth {
+	display: flex;
+	flex: 1;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background: radial-gradient(
+			circle,
+			rgba(255, 255, 255, 0.45) 15%,
+			rgba(51, 46, 115, 0.45) 94%,
+			rgba(51, 46, 115, 0.45) 100%
+		),
+		url("../assets/images/1.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: relative;
+}
+
+.form .links {
+	align-self: center;
+	text-align: center;
+}
