@@ -8,16 +8,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../css/client.css">
     <link rel="stylesheet" type="text/css" media="screen" href="../css/main.css" />
+    <link rel="shortcut icon" href="../assets/icons/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
     <section class="left side-nav">
         <div class="sidebar-links">
             <a href="#home" class="nav-link active">Home</a>
-            <a href="#" class="nav-link">New order</a>
-            <a href="#" class="nav-link">In transit</a>
-            <a href="#" class="nav-link">All</a>
+            <a href="./NewOrder.html" class="nav-link">New order</a>
+            <a href="./InTransit.html" class="nav-link">In transit</a>
             <a href="#profile" class="nav-link">Profile</a>
+        </div>
+        <div class="down-link">
+            <img src="../assets/icons/logout.svg" alt="lg" srcset="">
+            <a href="./Login.html" class="nav-link">Logout</a>
         </div>
     </section>
     <section class="right top-nav">
@@ -59,7 +63,7 @@
                         </div>
                         <hr />
                         <div class="item-counter">
-                            <h5>50</h5>
+                            <h5>43</h5>
                         </div>
                     </div>
                 </div>
@@ -73,7 +77,7 @@
                         </div>
                         <hr />
                         <div class="item-counter">
-                            <h5>50</h5>
+                            <h5>7</h5>
                         </div>
                     </div>
                 </div>
@@ -84,134 +88,207 @@
                 <div class="data-table">
                     <table>
                         <tr>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>Points</th>
-                            <th>Points</th>
-                            <th>Points</th>
-                            <th>Points</th>
-                            <th>Points</th>
-                            <th>Points</th>
+                            <th>From</th>
+                            <th>Avenue</th>
+                            <th>To</th>
+                            <th>Avenue</th>
+                            <th>Description</th>
+                            <th>Sent At</th>
+                            <th>Delivered At</th>
+                            <th>Price</th>
+                            <th>Status</th>
                         </tr>
                         <tr>
-                            <td>Jill</td>
-                            <td>Smith</td>
-                            <td>50</td>
-                            <td>50</td>
-                            <td>50</td>
-                            <td>50</td>
-                            <td>50</td>
-                            <td>50</td>
+                            <td>Kicukiro</td>
+                            <td>KK 11 AV</td>
+                            <td>Gasabo</td>
+                            <td>KK 19 Av</td>
+                            <td>
+                                <span> Q:2</span>
+                                <span> W:5</span>
+                                <span> L:4</span>
+                                <span> H:3</span>
+                            </td>
+                            <td>2 Feb, 18</td>
+                            <td>3 Feb, 18</td>
+                            <td>Rwf 1000</td>
+                            <td>Delivered</td>
                         </tr>
                         <tr>
-                            <td>Eve</td>
-                            <td>Jackson</td>
-                            <td>94</td>
-                            <td>94</td>
-                            <td>94</td>
-                            <td>94</td>
-                            <td>94</td>
-                            <td>94</td>
+                            <td>Kicukiroon</td>
+                            <td>KK 11 AV</td>
+                            <td>Gasabo</td>
+                            <td>KK 19 Av</td>
+                            <td>
+                                <span> Q:2</span>
+                                <span> W:5</span>
+                                <span> L:4</span>
+                                <span> H:3</span>
+                            </td>
+                            <td>2 Feb, 18</td>
+                            <td>3 Feb, 18</td>
+                            <td>Rwf 1000</td>
+                            <td>Delivered</td>
                         </tr>
                         <tr>
-                            <td>Adam</td>
-                            <td>Johnson</td>
-                            <td>67</td>
-                            <td>67</td>
-                            <td>67</td>
-                            <td>67</td>
-                            <td>67</td>
-                            <td>67</td>
+                            <td>Kicukiroon</td>
+                            <td>KK 11 AV</td>
+                            <td>Gasabo</td>
+                            <td>KK 19 Av</td>
+                            <td>
+                                <span> Q:2</span>
+                                <span> W:5</span>
+                                <span> L:4</span>
+                                <span> H:3</span>
+                            </td>
+                            <td>2 Feb, 18</td>
+                            <td>--</td>
+                            <td>Rwf 1000</td>
+                            <td>False</td>
                         </tr>
                         <tr>
-                            <td>Adam</td>
-                            <td>Johnson</td>
-                            <td>67</td>
-                            <td>67</td>
-                            <td>67</td>
-                            <td>67</td>
-                            <td>67</td>
-                            <td>67</td>
+                            <td>Kicukiroon</td>
+                            <td>KK 11 AV</td>
+                            <td>Gasabo</td>
+                            <td>KK 19 Av</td>
+                            <td>
+                                <span> Q:2</span>
+                                <span> W:5</span>
+                                <span> L:4</span>
+                                <span> H:3</span>
+                            </td>
+                            <td>2 Feb, 18</td>
+                            <td>3 Feb, 18</td>
+                            <td>Rwf 1000</td>
+                            <td>Delivered</td>
                         </tr>
                         <tr>
-                            <td>Adam</td>
-                            <td>Johnson</td>
-                            <td>67</td>
-                            <td>67</td>
-                            <td>67</td>
-                            <td>67</td>
-                            <td>67</td>
-                            <td>67</td>
+                            <td>Kicukiroon</td>
+                            <td>KK 11 AV</td>
+                            <td>Gasabo</td>
+                            <td>KK 19 Av</td>
+                            <td>
+                                <span> Q:2</span>
+                                <span> W:5</span>
+                                <span> L:4</span>
+                                <span> H:3</span>
+                            </td>
+                            <td>2 Feb, 18</td>
+                            <td>--</td>
+                            <td>Rwf 1000</td>
+                            <td>False</td>
                         </tr>
                         <tr>
-                            <td>Adam</td>
-                            <td>Johnson</td>
-                            <td>67</td>
-                            <td>67</td>
-                            <td>67</td>
-                            <td>67</td>
-                            <td>67</td>
-                            <td>67</td>
+                            <td>Kicukiroon</td>
+                            <td>KK 11 AV</td>
+                            <td>Gasabo</td>
+                            <td>KK 19 Av</td>
+                            <td>
+                                <span> Q:2</span>
+                                <span> W:5</span>
+                                <span> L:4</span>
+                                <span> H:3</span>
+                            </td>
+                            <td>2 Feb, 18</td>
+                            <td>--</td>
+                            <td>Rwf 1000</td>
+                            <td>False</td>
                         </tr>
                         <tr>
-                            <td>Adam</td>
-                            <td>Johnson</td>
-                            <td>67</td>
-                            <td>67</td>
-                            <td>67</td>
-                            <td>67</td>
-                            <td>67</td>
-                            <td>67</td>
+                            <td>Kicukiroon</td>
+                            <td>KK 11 AV</td>
+                            <td>Gasabo</td>
+                            <td>KK 19 Av</td>
+                            <td>
+                                <span> Q:2</span>
+                                <span> W:5</span>
+                                <span> L:4</span>
+                                <span> H:3</span>
+                            </td>
+                            <td>2 Feb, 18</td>
+                            <td>3 Feb, 18</td>
+                            <td>Rwf 1000</td>
+                            <td>Delivered</td>
                         </tr>
                         <tr>
-                            <td>Adam</td>
-                            <td>Johnson</td>
-                            <td>67</td>
-                            <td>67</td>
-                            <td>67</td>
-                            <td>67</td>
-                            <td>67</td>
-                            <td>67</td>
+                            <td>Kicukiroon</td>
+                            <td>KK 11 AV</td>
+                            <td>Gasabo</td>
+                            <td>KK 19 Av</td>
+                            <td>
+                                <span> Q:2</span>
+                                <span> W:5</span>
+                                <span> L:4</span>
+                                <span> H:3</span>
+                            </td>
+                            <td>2 Feb, 18</td>
+                            <td>--</td>
+                            <td>Rwf 1000</td>
+                            <td>False</td>
                         </tr>
                         <tr>
-                            <td>Adam</td>
-                            <td>Johnson</td>
-                            <td>67</td>
-                            <td>67</td>
-                            <td>67</td>
-                            <td>67</td>
-                            <td>67</td>
-                            <td>67</td>
+                            <td>Kicukiroon</td>
+                            <td>KK 11 AV</td>
+                            <td>Gasabo</td>
+                            <td>KK 19 Av</td>
+                            <td>
+                                <span> Q:2</span>
+                                <span> W:5</span>
+                                <span> L:4</span>
+                                <span> H:3</span>
+                            </td>
+                            <td>2 Feb, 18</td>
+                            <td>--</td>
+                            <td>Rwf 1000</td>
+                            <td>False</td>
                         </tr>
                         <tr>
-                            <td>Adam</td>
-                            <td>Johnson</td>
-                            <td>67</td>
-                            <td>67</td>
-                            <td>67</td>
-                            <td>67</td>
-                            <td>67</td>
-                            <td>67</td>
+                            <td>Kicukiroon</td>
+                            <td>KK 11 AV</td>
+                            <td>Gasabo</td>
+                            <td>KK 19 Av</td>
+                            <td>
+                                <span> Q:2</span>
+                                <span> W:5</span>
+                                <span> L:4</span>
+                                <span> H:3</span>
+                            </td>
+                            <td>2 Feb, 18</td>
+                            <td>--</td>
+                            <td>Rwf 1000</td>
+                            <td>False</td>
                         </tr>
                         <tr>
-                            <td>Adam</td>
-                            <td>Johnson</td>
-                            <td>67</td>
-                            <td>67</td>
-                            <td>67</td>
-                            <td>67</td>
-                            <td>67</td>
-                            <td>67</td>
+                            <td>Kicukiroon</td>
+                            <td>KK 11 AV</td>
+                            <td>Gasabo</td>
+                            <td>KK 19 Av</td>
+                            <td>
+                                <span> Q:2</span>
+                                <span> W:5</span>
+                                <span> L:4</span>
+                                <span> H:3</span>
+                            </td>
+                            <td>2 Feb, 18</td>
+                            <td>3 Feb, 18</td>
+                            <td>Rwf 1000</td>
+                            <td>Delivered</td>
                         </tr>
                         <tr>
-                            <td>Adam</td>
-                            <td>Johnson</td>
-                            <td>67</td>
-                            <td>67</td>
-                            <td>67</td>
-                            <td>67</td>
-                            <td>67</td>
-                            <td>67</td>
+                            <td>Kicukiroon</td>
+                            <td>KK 11 AV</td>
+                            <td>Gasabo</td>
+                            <td>KK 19 Av</td>
+                            <td>
+                                <span> Q:2</span>
+                                <span> W:5</span>
+                                <span> L:4</span>
+                                <span> H:3</span>
+                            </td>
+                            <td>2 Feb, 18</td>
+                            <td>-- </td>
+                            <td>Rwf 1000</td>
+                            <td>False</td>
                         </tr>
                     </table>
                 </div>
