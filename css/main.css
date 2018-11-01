@@ -134,6 +134,7 @@ a:hover,
 a:focus {
 	text-decoration: none;
 	color: var(--main-white);
+	font-family: 'Gotham-Medium'
 }
 a.nav-link {
 	text-decoration: none;
