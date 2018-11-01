@@ -61,6 +61,27 @@
 	border: 1px solid var(--royal-primary-purple);
 }
 
+/*media queries*/
+/* for mobile extra small screen */
+@media only screen and (max-width: 767px) {
+	.progress li:before {
+		margin: 0px 0px 10px 0px;
+	}
+	.progress li:after {
+		left: -90%;
+	}
+
+	.progress li {
+		text-align: start;
+		font-size: 12px;
+	}
+}
+/*buttons */
+.inline-btn {
+	display: flex;
+	flex-direction: row;
+	flex: 1;
+}
 /* forms css*/
 #new-order .order-form {
 	display: none;

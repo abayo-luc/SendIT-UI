@@ -42,13 +42,13 @@ td:hover .icon-cancel {
 
 /* The Close Button */
 .close {
-	color: var(--royal-super-light-purple);
+	color: var(--royal-light-purple);
 	float: right;
 	font-size: 28px;
 	font-weight: bolder;
 }
 
 .close:hover {
-	color: var(--royal-light-purple);
+	color: var(--royal-primary-purple);
 	cursor: pointer;
 }
