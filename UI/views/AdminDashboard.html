@@ -4,12 +4,12 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Orders In Transit</title>
+    <title>Admin</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="../assets/icons/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" media="screen" href="../css/main.css" />
     <link rel="stylesheet" href="../css/inTransit.css">
-    <script src="../js/main.js"></script>
+    <link rel="stylesheet" href="../css/admin.css">
 </head>
 
 <body>
@@ -20,9 +20,8 @@
                 <h3>SendIT</h3>
             </div>
             <div class="sidebar-links">
-                <a href="./DashboardClient.html" class="nav-link">Home</a>
-                <a href="./NewOrder.html" class="nav-link ">New order</a>
-                <a href="#" class="nav-link active">In transit</a>
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="./InTransit.html" class="nav-link">In transit</a>
             </div>
         </div>
         <div class="down-link">
@@ -37,7 +36,7 @@
         </div>
         <div class="right">
             <div class="topbar-content">
-                <img src="../assets//images/1.jpg" alt="profile" srcset="" class="sm-circle profile">
+                <img src="../assets//images/admin-user.png" alt="profile" srcset="" class="sm-circle profile">
                 <div class="names">
                     <p>FirstName</p>
                     <p>Last Name</p>
@@ -50,9 +49,8 @@
                 </div>
                 <div class="dropdown-content" id="drp-conent">
                     <ul>
-                        <li><a href="./DashboardClient.html">Home</a></li>
-                        <li><a href="./NewOrder.html">New</a></li>
-                        <li><a href="#">Transit</a></li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="./InTransit.html">Transit</a></li>
                         <li><a href="./Login.html">Logout</a></li>
                     </ul>
                 </div>
@@ -60,6 +58,50 @@
         </div>
     </section>
     <section class="content">
+        <div class="row">
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-title">
+                            <img src="../assets/icons/storage-box.svg" alt=">>" srcset="" class="lg-icon">
+                            <h4>All</h4>
+                        </div>
+                        <hr />
+                        <div class="item-counter">
+                            <h5>50</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-title">
+                            <img src="../assets/icons/delivered.svg" alt=">>" srcset="" class="lg-icon">
+                            <h4>Delivered</h4>
+                        </div>
+                        <hr />
+                        <div class="item-counter">
+                            <h5>43</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-title">
+                            <img src="../assets/icons/shipped.svg" alt=">>" srcset="" class="lg-icon">
+                            <h4>In Transit</h4>
+                        </div>
+                        <hr />
+                        <div class="item-counter">
+                            <h5>7</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="lg-card">
             <div class="lg-card-content">
                 <div class="data-table">
@@ -70,7 +112,10 @@
                             <th>Destination</th>
                             <th>Avenue</th>
                             <th>Description</th>
-                            <th>Sent Time</th>
+                            <th>Recieved At</th>
+                            <th>Delivered At</th>
+                            <th>Location <img src="../assets/icons/current-location.svg" alt=">" srcset="" class="lg-icon">
+                            </th>
                             <th>Status</th>
                         </tr>
                         <tr>
@@ -78,9 +123,6 @@
                             <td>KK 11 AV</td>
                             <td class="editable">
                                 <span>Gasabo</span>
-                                <span class="icon-edit" onclick="openModel()">
-                                    <img src="../assets/icons/edit.svg" alt="*" srcset="" title="Edit" class="md-icon">
-                                </span>
                             </td>
                             <td>KK 19 Av</td>
                             <td>
@@ -90,10 +132,13 @@
                                 <span> H:3</span>
                             </td>
                             <td>2 Feb, 18</td>
-                            <td class="status">
+                            <td>3 Fb, 18</td>
+                            <td><small>Kacyiru, KG 11 Av</small></td>
+                            <td class="editable">
                                 <span>False</span>
-                                <span class="icon-cancel" onclick="cancelOrder(this)">
-                                    <img src="../assets/icons/dustbin.svg" alt="*" srcset="" title="Cancel" class="md-icon">
+                                <span class="icon-edit" onclick="openModel()">
+                                    <img src="../assets/icons/edit.svg" alt="*" srcset="" title="Update Status & Location"
+                                        class="md-icon">
                                 </span>
                             </td>
                         </tr>
@@ -102,9 +147,6 @@
                             <td>KK 11 AV</td>
                             <td class="editable">
                                 <span>Gasabo</span>
-                                <span class="icon-edit" onclick="openModel()">
-                                    <img src="../assets/icons/edit.svg" alt="*" srcset="" title="Edit" class="md-icon">
-                                </span>
                             </td>
                             <td>KK 19 Av</td>
                             <td>
@@ -114,10 +156,13 @@
                                 <span> H:3</span>
                             </td>
                             <td>2 Feb, 18</td>
-                            <td class="status">
+                            <td>3 Fb, 18</td>
+                            <td><small>Kacyiru, KG 11 Av</small></td>
+                            <td class="editable">
                                 <span>False</span>
-                                <span class="icon-cancel" onclick="cancelOrder(this)">
-                                    <img src="../assets/icons/dustbin.svg" alt="*" srcset="" title="Cancel" class="md-icon">
+                                <span class="icon-edit" onclick="openModel()">
+                                    <img src="../assets/icons/edit.svg" alt="*" srcset="" title="Update Status & Location"
+                                        class="md-icon">
                                 </span>
                             </td>
                         </tr>
@@ -126,9 +171,6 @@
                             <td>KK 11 AV</td>
                             <td class="editable">
                                 <span>Gasabo</span>
-                                <span class="icon-edit" onclick="openModel()">
-                                    <img src="../assets/icons/edit.svg" alt="*" srcset="" title="Edit" class="md-icon">
-                                </span>
                             </td>
                             <td>KK 19 Av</td>
                             <td>
@@ -138,10 +180,13 @@
                                 <span> H:3</span>
                             </td>
                             <td>2 Feb, 18</td>
-                            <td class="status">
+                            <td>3 Fb, 18</td>
+                            <td><small>Kacyiru, KG 11 Av</small></td>
+                            <td class="editable">
                                 <span>False</span>
-                                <span class="icon-cancel" onclick="cancelOrder(this)">
-                                    <img src="../assets/icons/dustbin.svg" alt="*" srcset="" title="Cancel" class="md-icon">
+                                <span class="icon-edit" onclick="openModel()">
+                                    <img src="../assets/icons/edit.svg" alt="*" srcset="" title="Update Status & Location"
+                                        class="md-icon">
                                 </span>
                             </td>
                         </tr>
@@ -150,9 +195,6 @@
                             <td>KK 11 AV</td>
                             <td class="editable">
                                 <span>Gasabo</span>
-                                <span class="icon-edit" onclick="openModel()">
-                                    <img src="../assets/icons/edit.svg" alt="*" srcset="" title="Edit" class="md-icon">
-                                </span>
                             </td>
                             <td>KK 19 Av</td>
                             <td>
@@ -162,10 +204,13 @@
                                 <span> H:3</span>
                             </td>
                             <td>2 Feb, 18</td>
-                            <td class="status">
+                            <td>3 Fb, 18</td>
+                            <td><small>Kacyiru, KG 11 Av</small></td>
+                            <td class="editable">
                                 <span>False</span>
-                                <span class="icon-cancel" onclick="cancelOrder(this)">
-                                    <img src="../assets/icons/dustbin.svg" alt="*" srcset="" title="Cancel" class="md-icon">
+                                <span class="icon-edit" onclick="openModel()">
+                                    <img src="../assets/icons/edit.svg" alt="*" srcset="" title="Update Status & Location"
+                                        class="md-icon">
                                 </span>
                             </td>
                         </tr>
@@ -174,9 +219,6 @@
                             <td>KK 11 AV</td>
                             <td class="editable">
                                 <span>Gasabo</span>
-                                <span class="icon-edit" onclick="openModel()">
-                                    <img src="../assets/icons/edit.svg" alt="*" srcset="" title="Edit" class="md-icon">
-                                </span>
                             </td>
                             <td>KK 19 Av</td>
                             <td>
@@ -186,10 +228,13 @@
                                 <span> H:3</span>
                             </td>
                             <td>2 Feb, 18</td>
-                            <td class="status">
+                            <td>3 Fb, 18</td>
+                            <td><small>Kacyiru, KG 11 Av</small></td>
+                            <td class="editable">
                                 <span>False</span>
-                                <span class="icon-cancel" onclick="cancelOrder(this)">
-                                    <img src="../assets/icons/dustbin.svg" alt="*" srcset="" title="Cancel" class="md-icon">
+                                <span class="icon-edit" onclick="openModel()">
+                                    <img src="../assets/icons/edit.svg" alt="*" srcset="" title="Update Status & Location"
+                                        class="md-icon">
                                 </span>
                             </td>
                         </tr>
@@ -198,9 +243,6 @@
                             <td>KK 11 AV</td>
                             <td class="editable">
                                 <span>Gasabo</span>
-                                <span class="icon-edit" onclick="openModel()">
-                                    <img src="../assets/icons/edit.svg" alt="*" srcset="" title="Edit" class="md-icon">
-                                </span>
                             </td>
                             <td>KK 19 Av</td>
                             <td>
@@ -210,10 +252,13 @@
                                 <span> H:3</span>
                             </td>
                             <td>2 Feb, 18</td>
-                            <td class="status">
+                            <td>3 Fb, 18</td>
+                            <td><small>Kacyiru, KG 11 Av</small></td>
+                            <td class="editable">
                                 <span>False</span>
-                                <span class="icon-cancel" onclick="cancelOrder(this)">
-                                    <img src="../assets/icons/dustbin.svg" alt="*" srcset="" title="Cancel" class="md-icon">
+                                <span class="icon-edit" onclick="openModel()">
+                                    <img src="../assets/icons/edit.svg" alt="*" srcset="" title="Update Status & Location"
+                                        class="md-icon">
                                 </span>
                             </td>
                         </tr>
@@ -222,9 +267,6 @@
                             <td>KK 11 AV</td>
                             <td class="editable">
                                 <span>Gasabo</span>
-                                <span class="icon-edit" onclick="openModel()">
-                                    <img src="../assets/icons/edit.svg" alt="*" srcset="" title="Edit" class="md-icon">
-                                </span>
                             </td>
                             <td>KK 19 Av</td>
                             <td>
@@ -234,10 +276,13 @@
                                 <span> H:3</span>
                             </td>
                             <td>2 Feb, 18</td>
-                            <td class="status">
+                            <td>3 Fb, 18</td>
+                            <td><small>Kacyiru, KG 11 Av</small></td>
+                            <td class="editable">
                                 <span>False</span>
-                                <span class="icon-cancel" onclick="cancelOrder(this)">
-                                    <img src="../assets/icons/dustbin.svg" alt="*" srcset="" title="Cancel" class="md-icon">
+                                <span class="icon-edit" onclick="openModel()">
+                                    <img src="../assets/icons/edit.svg" alt="*" srcset="" title="Update Status & Location"
+                                        class="md-icon">
                                 </span>
                             </td>
                         </tr>
@@ -246,9 +291,6 @@
                             <td>KK 11 AV</td>
                             <td class="editable">
                                 <span>Gasabo</span>
-                                <span class="icon-edit" onclick="openModel()">
-                                    <img src="../assets/icons/edit.svg" alt="*" srcset="" title="Edit" class="md-icon">
-                                </span>
                             </td>
                             <td>KK 19 Av</td>
                             <td>
@@ -258,10 +300,13 @@
                                 <span> H:3</span>
                             </td>
                             <td>2 Feb, 18</td>
-                            <td class="status">
+                            <td>3 Fb, 18</td>
+                            <td><small>Kacyiru, KG 11 Av</small></td>
+                            <td class="editable">
                                 <span>False</span>
-                                <span class="icon-cancel" onclick="cancelOrder(this)">
-                                    <img src="../assets/icons/dustbin.svg" alt="*" srcset="" title="Cancel" class="md-icon">
+                                <span class="icon-edit" onclick="openModel()">
+                                    <img src="../assets/icons/edit.svg" alt="*" srcset="" title="Update Status & Location"
+                                        class="md-icon">
                                 </span>
                             </td>
                         </tr>
@@ -270,9 +315,6 @@
                             <td>KK 11 AV</td>
                             <td class="editable">
                                 <span>Gasabo</span>
-                                <span class="icon-edit" onclick="openModel()">
-                                    <img src="../assets/icons/edit.svg" alt="*" srcset="" title="Edit" class="md-icon">
-                                </span>
                             </td>
                             <td>KK 19 Av</td>
                             <td>
@@ -282,10 +324,13 @@
                                 <span> H:3</span>
                             </td>
                             <td>2 Feb, 18</td>
-                            <td class="status">
+                            <td>3 Fb, 18</td>
+                            <td><small>Kacyiru, KG 11 Av</small></td>
+                            <td class="editable">
                                 <span>False</span>
-                                <span class="icon-cancel" onclick="cancelOrder(this)">
-                                    <img src="../assets/icons/dustbin.svg" alt="*" srcset="" title="Cancel" class="md-icon">
+                                <span class="icon-edit" onclick="openModel()">
+                                    <img src="../assets/icons/edit.svg" alt="*" srcset="" title="Update Status & Location"
+                                        class="md-icon">
                                 </span>
                             </td>
                         </tr>
@@ -294,9 +339,6 @@
                             <td>KK 11 AV</td>
                             <td class="editable">
                                 <span>Gasabo</span>
-                                <span class="icon-edit" onclick="openModel()">
-                                    <img src="../assets/icons/edit.svg" alt="*" srcset="" title="Edit" class="md-icon">
-                                </span>
                             </td>
                             <td>KK 19 Av</td>
                             <td>
@@ -306,10 +348,13 @@
                                 <span> H:3</span>
                             </td>
                             <td>2 Feb, 18</td>
-                            <td class="status">
+                            <td>3 Fb, 18</td>
+                            <td><small>Kacyiru, KG 11 Av</small></td>
+                            <td class="editable">
                                 <span>False</span>
-                                <span class="icon-cancel" onclick="cancelOrder(this)">
-                                    <img src="../assets/icons/dustbin.svg" alt="*" srcset="" title="Cancel" class="md-icon">
+                                <span class="icon-edit" onclick="openModel()">
+                                    <img src="../assets/icons/edit.svg" alt="*" srcset="" title="Update Status & Location"
+                                        class="md-icon">
                                 </span>
                             </td>
                         </tr>
@@ -318,9 +363,6 @@
                             <td>KK 11 AV</td>
                             <td class="editable">
                                 <span>Gasabo</span>
-                                <span class="icon-edit" onclick="openModel()">
-                                    <img src="../assets/icons/edit.svg" alt="*" srcset="" title="Edit" class="md-icon">
-                                </span>
                             </td>
                             <td>KK 19 Av</td>
                             <td>
@@ -330,10 +372,13 @@
                                 <span> H:3</span>
                             </td>
                             <td>2 Feb, 18</td>
-                            <td class="status">
+                            <td>3 Fb, 18</td>
+                            <td><small>Kacyiru, KG 11 Av</small></td>
+                            <td class="editable">
                                 <span>False</span>
-                                <span class="icon-cancel" onclick="cancelOrder(this)">
-                                    <img src="../assets/icons/dustbin.svg" alt="*" srcset="" title="Cancel" class="md-icon">
+                                <span class="icon-edit" onclick="openModel()">
+                                    <img src="../assets/icons/edit.svg" alt="*" srcset="" title="Update Status & Location"
+                                        class="md-icon">
                                 </span>
                             </td>
                         </tr>
@@ -342,9 +387,6 @@
                             <td>KK 11 AV</td>
                             <td class="editable">
                                 <span>Gasabo</span>
-                                <span class="icon-edit" onclick="openModel()">
-                                    <img src="../assets/icons/edit.svg" alt="*" srcset="" title="Edit" class="md-icon">
-                                </span>
                             </td>
                             <td>KK 19 Av</td>
                             <td>
@@ -354,10 +396,13 @@
                                 <span> H:3</span>
                             </td>
                             <td>2 Feb, 18</td>
-                            <td class="status">
+                            <td>3 Fb, 18</td>
+                            <td><small>Kimironko, KG 17 AV</small></td>
+                            <td class="editable">
                                 <span>False</span>
-                                <span class="icon-cancel" onclick="cancelOrder(this)">
-                                    <img src="../assets/icons/dustbin.svg" alt="*" srcset="" class="md-icon" title="Cancel">
+                                <span class="icon-edit" onclick="openModel()">
+                                    <img src="../assets/icons/edit.svg" alt="*" srcset="" title="Update Status & Location"
+                                        class="md-icon">
                                 </span>
                             </td>
                         </tr>
@@ -374,26 +419,30 @@
             <div class="row padding">
                 <div class="col-4">
                     <div class="labeled-input">
-                        <label for="email">Destination</label>
-                        <div class="custom-select">
-                            <select>
-                                <option value="0">Gasabo</option>
-                                <option value="1">Musanze</option>
-                                <option value="2">Nyama</option>
-                                <option value="3">Nyarugenge</option>
-                                <option value="4">Kicukiro</option>
-                                <option value="5">Kamonyi</option>
-                                <option value="6">Muhanga</option>
-                                <option value="7">Rwamagana</option>
-                            </select>
-                        </div>
+                        <label for="email">Current City</label>
+                        <input type="text" name="address" id="current-loc" class="custom-input" pattern="[0-9]{5}"
+                            style="width: 100%">
                     </div>
                 </div>
                 <div class="col-3"></div>
                 <div class="col-4">
                     <div class="labeled-input">
-                        <label for="faddres">Address</label>
+                        <label for="faddres">Current Address <img src="../assets/icons/current-location-purple.svg" alt=""
+                                srcset="" class="lg-icon"></label>
                         <input type="text" name="address" id="address" class="custom-input" pattern="[0-9]{5}" style="width: 100%">
+                    </div>
+                </div>
+            </div>
+            <div class="row padding">
+                <div class="col-2">
+                    <div class="labeled-input">
+                        <label for="email">Delivered</label>
+                        <div class="custom-select">
+                            <select>
+                                <option value="0">False</option>
+                                <option value="1">True</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -409,6 +458,7 @@
         </div>
     </section>
     <!-- popup model javascript -->
+    <script src="../js/main.js"></script>
     <script src="../js/model.js"></script>
 </body>
 

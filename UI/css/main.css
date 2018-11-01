@@ -37,6 +37,7 @@
 	--dark-gray: #414951;
 	--focus-border: 1px solid #6257a2;
 	--border-radius: 0.3em;
+	--secondary-white: #f4f4f4;
 }
 body {
 	margin: 0%;
@@ -259,6 +260,7 @@ btn {
 	border: 1px solid var(--royal-primary-purple);
 	font-size: 1.25em;
 	margin: 0.8em 0em 0.8em 0em;
+	cursor: pointer;
 }
 
 .btn.btn-primary {
@@ -275,7 +277,7 @@ a:hover.btn.btn-primary {
 }
 a.btn.btn-default,
 button:hover.btn.btn-default {
-	background-color: var(--royal-super-light-purple);
+	background-color: var(--main-white);
 }
 .btn-block {
 	display: block;
@@ -291,18 +293,21 @@ button:hover.btn.btn-default {
 	height: 100%;
 	width: 160px;
 	position: fixed;
-	z-index: 1;
+	z-index: 2;
 	top: 0;
 	left: 0;
 	background-color: var(--royal-primary-purple);
 	overflow-x: hidden;
-	margin-top: 60px;
+	/* margin-top: 60px; */
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 }
-
+.side-nav .top .logo-container {
+	padding-top: 0.7em;
+}
 .sidebar-links {
+	padding-top: 0.5em;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
@@ -322,7 +327,7 @@ a.active {
 .down-link {
 	padding: 0.3em 0.5em;
 	margin: 0.5em 0.1em;
-	margin-bottom: 5em;
+	margin-bottom: 1em;
 	font-size: 1.2em;
 	color: var(--royal-super-light-purple);
 	align-items: center;
@@ -343,14 +348,8 @@ a.active {
 .top-nav {
 	width: 100%;
 	position: fixed;
-	z-index: 2;
-	background: rgb(51, 46, 115);
-	background: linear-gradient(
-		90deg,
-		rgba(51, 46, 115, 1) 49%,
-		rgba(255, 255, 255, 1) 100%,
-		rgba(51, 46, 115, 1) 100%
-	);
+	z-index: 1;
+	background-color: var(--secondary-white);
 	top: 0;
 	max-height: 80px;
 	display: flex;
@@ -405,6 +404,46 @@ a.active {
 	padding-top: 0.5em;
 	align-self: flex-start;
 }
+.top-nav .right .mob-dropdown {
+	display: none;
+}
+.top-nav .mob-dropdown {
+	position: relative;
+	padding-right: 5px;
+}
+
+.top-nav .dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: var(--secondary-white);
+	min-width: 120px;
+	box-shadow: 1px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+	right: 50%;
+	border-radius: 5px;
+	border: 1px solid var(--royal-super-light-purple);
+}
+.top-nav .dropdown-content ul {
+	padding: 0;
+	margin: 0;
+}
+.top-nav .dropdown-content ul li {
+	list-style: none;
+	text-align: start;
+	border-bottom: 1px solid var(--royal-light-purple);
+	padding: 5px 0px 5px 0px;
+	margin: 0px 5px 0px 5px;
+}
+.dropdown-content ul li:last-child {
+	border-bottom: 0px solid var(--royal-light-purple);
+}
+.dropdown-content ul li a {
+	color: var(--royal-primary-purple);
+}
+
+.mob-dropdown .dropdown-icon:hover .dropdown-content {
+	display: block;
+}
 /* images */
 img.sm-circle {
 	width: 50px;
@@ -413,6 +452,9 @@ img.sm-circle {
 }
 img.md-icon {
 	width: 0.8em;
+}
+img.lg-icon {
+	width: 1.2em !important;
 }
 /*card stayls*/
 .lg-card {
@@ -464,7 +506,7 @@ img.md-icon {
 	color: var(--royal-light-purple);
 }
 .card .card-content .card-title img {
-	height: 10px;
+	/* height: 10px; */
 	/* width: 15px; */
 }
 
@@ -486,17 +528,20 @@ th {
 	padding: 8px;
 }
 tr:nth-child(1) {
-	background-color: var(--royal-primary-purple);
+	background-color: var(--royal-light-purple);
 	padding: 0.5em 0em;
 	color: var(--main-white);
-	font-family: "Gotham-Medium";
+	/* font-family: "Gotham-Medium"; */
 }
-tr:hover,
-tr:nth-child(even):hover {
+tr:nth-child(1):hover {
 	background-color: var(--royal-light-purple);
+	padding: 0.5em 0em;
+	color: var(--main-white);
+	/* font-family: "Gotham-Medium"; */
 }
+
 tr:hover td {
-	color: var(--royal-super-light-purple);
+	font-weight: bold;
 }
 tr:nth-child(even) {
 	background-color: #e0deed;
@@ -524,6 +569,18 @@ tr:nth-child(even) {
 		margin-top: 40px; /* should be reset*/
 		padding: 0px;
 	}
+	.top-nav {
+		background: rgb(51, 46, 115);
+		background: linear-gradient(
+			90deg,
+			rgba(51, 46, 115, 1) 49%,
+			rgba(255, 255, 255, 1) 100%,
+			rgba(51, 46, 115, 1) 100%
+		);
+	}
+	.top-nav .right .mob-dropdown {
+		display: block;
+	}
 }
 /* for small screen */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
@@ -537,5 +594,14 @@ tr:nth-child(even) {
 		margin-left: 5px; /* should reset */
 		margin-top: 80px; /* should be reset*/
 		padding: 0px;
+	}
+	.top-nav {
+		background: rgb(51, 46, 115);
+		background: linear-gradient(
+			90deg,
+			rgba(51, 46, 115, 1) 49%,
+			rgba(255, 255, 255, 1) 100%,
+			rgba(51, 46, 115, 1) 100%
+		);
 	}
 }
