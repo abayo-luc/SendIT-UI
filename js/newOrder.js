@@ -27,7 +27,7 @@ const nextOrPrev = action => {
 			orderForms[activeIndex - 1].classList.add("active");
 
 			steps.length > activeSteps.length &&
-				steps[activeSteps.length].classList.remove("active");
+				steps[activeSteps.length - 1].classList.remove("active");
 		default:
 			return null;
 	}
