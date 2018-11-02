@@ -9,7 +9,6 @@
     <link rel="shortcut icon" href="../assets/icons/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" media="screen" href="../css/main.css" />
     <link rel="stylesheet" href="../css/inTransit.css">
-    <script src="../js/main.js"></script>
 </head>
 
 <body>
@@ -20,9 +19,22 @@
                 <h3>SendIT</h3>
             </div>
             <div class="sidebar-links">
-                <a href="./DashboardClient.html" class="nav-link">Home</a>
-                <a href="./NewOrder.html" class="nav-link ">New order</a>
-                <a href="#" class="nav-link active">In transit</a>
+                <a href="./ClientDashboard.html" class="nav-link">
+                    <img src="../assets/icons/home-light.svg" alt="" srcset="" class="xlg-icon">
+                    <span>Home</span>
+                </a>
+                <a href="./NewOrder.html" class="nav-link ">
+                    <img src="../assets/icons/plus-light.svg" alt="" srcset="" class="xlg-icon">
+                    <span>Add Order</span>
+                </a>
+                <a href="#" class="nav-link active">
+                    <img src="../assets/icons/moving-truck-light.svg" alt="" srcset="" class="xlg-icon">
+                    <span>Transit</span>
+                </a>
+                <a href="#" class="nav-link logout">
+                    <img src="../assets/icons/logout.svg" alt="" srcset="" class="xlg-icon">
+                    <span>Logout</span>
+                </a>
             </div>
         </div>
         <div class="down-link">
@@ -50,7 +62,7 @@
                 </div>
                 <div class="dropdown-content" id="drp-conent">
                     <ul>
-                        <li><a href="./DashboardClient.html">Home</a></li>
+                        <li><a href="./ClientDashboard.html">Home</a></li>
                         <li><a href="./NewOrder.html">New</a></li>
                         <li><a href="#">Transit</a></li>
                         <li><a href="./Login.html">Logout</a></li>
@@ -79,7 +91,7 @@
                             <td class="editable">
                                 <span>Gasabo</span>
                                 <span class="icon-edit" onclick="openModel()">
-                                    <img src="../assets/icons/edit.svg" alt="*" srcset="" title="Edit" class="md-icon">
+                                    <img src="../assets/icons/edit.svg" alt="*" srcset="" title="Edit" class="lg-icon">
                                 </span>
                             </td>
                             <td>KK 19 Av</td>
@@ -93,7 +105,7 @@
                             <td class="status">
                                 <span>False</span>
                                 <span class="icon-cancel" onclick="cancelOrder(this)">
-                                    <img src="../assets/icons/dustbin.svg" alt="*" srcset="" title="Cancel" class="md-icon">
+                                    <img src="../assets/icons/cancel.svg" alt="*" srcset="" title="Cancel" class="lg-icon">
                                 </span>
                             </td>
                         </tr>
@@ -103,7 +115,7 @@
                             <td class="editable">
                                 <span>Gasabo</span>
                                 <span class="icon-edit" onclick="openModel()">
-                                    <img src="../assets/icons/edit.svg" alt="*" srcset="" title="Edit" class="md-icon">
+                                    <img src="../assets/icons/edit.svg" alt="*" srcset="" title="Edit" class="lg-icon">
                                 </span>
                             </td>
                             <td>KK 19 Av</td>
@@ -117,7 +129,7 @@
                             <td class="status">
                                 <span>False</span>
                                 <span class="icon-cancel" onclick="cancelOrder(this)">
-                                    <img src="../assets/icons/dustbin.svg" alt="*" srcset="" title="Cancel" class="md-icon">
+                                    <img src="../assets/icons/cancel.svg" alt="*" srcset="" title="Cancel" class="lg-icon">
                                 </span>
                             </td>
                         </tr>
@@ -127,7 +139,7 @@
                             <td class="editable">
                                 <span>Gasabo</span>
                                 <span class="icon-edit" onclick="openModel()">
-                                    <img src="../assets/icons/edit.svg" alt="*" srcset="" title="Edit" class="md-icon">
+                                    <img src="../assets/icons/edit.svg" alt="*" srcset="" title="Edit" class="lg-icon">
                                 </span>
                             </td>
                             <td>KK 19 Av</td>
@@ -141,7 +153,7 @@
                             <td class="status">
                                 <span>False</span>
                                 <span class="icon-cancel" onclick="cancelOrder(this)">
-                                    <img src="../assets/icons/dustbin.svg" alt="*" srcset="" title="Cancel" class="md-icon">
+                                    <img src="../assets/icons/cancel.svg" alt="*" srcset="" title="Cancel" class="lg-icon">
                                 </span>
                             </td>
                         </tr>
@@ -151,7 +163,7 @@
                             <td class="editable">
                                 <span>Gasabo</span>
                                 <span class="icon-edit" onclick="openModel()">
-                                    <img src="../assets/icons/edit.svg" alt="*" srcset="" title="Edit" class="md-icon">
+                                    <img src="../assets/icons/edit.svg" alt="*" srcset="" title="Edit" class="lg-icon">
                                 </span>
                             </td>
                             <td>KK 19 Av</td>
@@ -165,7 +177,7 @@
                             <td class="status">
                                 <span>False</span>
                                 <span class="icon-cancel" onclick="cancelOrder(this)">
-                                    <img src="../assets/icons/dustbin.svg" alt="*" srcset="" title="Cancel" class="md-icon">
+                                    <img src="../assets/icons/cancel.svg" alt="*" srcset="" title="Cancel" class="lg-icon">
                                 </span>
                             </td>
                         </tr>
@@ -175,7 +187,7 @@
                             <td class="editable">
                                 <span>Gasabo</span>
                                 <span class="icon-edit" onclick="openModel()">
-                                    <img src="../assets/icons/edit.svg" alt="*" srcset="" title="Edit" class="md-icon">
+                                    <img src="../assets/icons/edit.svg" alt="*" srcset="" title="Edit" class="lg-icon">
                                 </span>
                             </td>
                             <td>KK 19 Av</td>
@@ -189,7 +201,7 @@
                             <td class="status">
                                 <span>False</span>
                                 <span class="icon-cancel" onclick="cancelOrder(this)">
-                                    <img src="../assets/icons/dustbin.svg" alt="*" srcset="" title="Cancel" class="md-icon">
+                                    <img src="../assets/icons/cancel.svg" alt="*" srcset="" title="Cancel" class="lg-icon">
                                 </span>
                             </td>
                         </tr>
@@ -199,7 +211,7 @@
                             <td class="editable">
                                 <span>Gasabo</span>
                                 <span class="icon-edit" onclick="openModel()">
-                                    <img src="../assets/icons/edit.svg" alt="*" srcset="" title="Edit" class="md-icon">
+                                    <img src="../assets/icons/edit.svg" alt="*" srcset="" title="Edit" class="lg-icon">
                                 </span>
                             </td>
                             <td>KK 19 Av</td>
@@ -213,7 +225,7 @@
                             <td class="status">
                                 <span>False</span>
                                 <span class="icon-cancel" onclick="cancelOrder(this)">
-                                    <img src="../assets/icons/dustbin.svg" alt="*" srcset="" title="Cancel" class="md-icon">
+                                    <img src="../assets/icons/cancel.svg" alt="*" srcset="" title="Cancel" class="lg-icon">
                                 </span>
                             </td>
                         </tr>
@@ -223,7 +235,7 @@
                             <td class="editable">
                                 <span>Gasabo</span>
                                 <span class="icon-edit" onclick="openModel()">
-                                    <img src="../assets/icons/edit.svg" alt="*" srcset="" title="Edit" class="md-icon">
+                                    <img src="../assets/icons/edit.svg" alt="*" srcset="" title="Edit" class="lg-icon">
                                 </span>
                             </td>
                             <td>KK 19 Av</td>
@@ -237,7 +249,7 @@
                             <td class="status">
                                 <span>False</span>
                                 <span class="icon-cancel" onclick="cancelOrder(this)">
-                                    <img src="../assets/icons/dustbin.svg" alt="*" srcset="" title="Cancel" class="md-icon">
+                                    <img src="../assets/icons/cancel.svg" alt="*" srcset="" title="Cancel" class="lg-icon">
                                 </span>
                             </td>
                         </tr>
@@ -247,7 +259,7 @@
                             <td class="editable">
                                 <span>Gasabo</span>
                                 <span class="icon-edit" onclick="openModel()">
-                                    <img src="../assets/icons/edit.svg" alt="*" srcset="" title="Edit" class="md-icon">
+                                    <img src="../assets/icons/edit.svg" alt="*" srcset="" title="Edit" class="lg-icon">
                                 </span>
                             </td>
                             <td>KK 19 Av</td>
@@ -261,7 +273,7 @@
                             <td class="status">
                                 <span>False</span>
                                 <span class="icon-cancel" onclick="cancelOrder(this)">
-                                    <img src="../assets/icons/dustbin.svg" alt="*" srcset="" title="Cancel" class="md-icon">
+                                    <img src="../assets/icons/cancel.svg" alt="*" srcset="" title="Cancel" class="lg-icon">
                                 </span>
                             </td>
                         </tr>
@@ -271,7 +283,7 @@
                             <td class="editable">
                                 <span>Gasabo</span>
                                 <span class="icon-edit" onclick="openModel()">
-                                    <img src="../assets/icons/edit.svg" alt="*" srcset="" title="Edit" class="md-icon">
+                                    <img src="../assets/icons/edit.svg" alt="*" srcset="" title="Edit" class="lg-icon">
                                 </span>
                             </td>
                             <td>KK 19 Av</td>
@@ -285,7 +297,7 @@
                             <td class="status">
                                 <span>False</span>
                                 <span class="icon-cancel" onclick="cancelOrder(this)">
-                                    <img src="../assets/icons/dustbin.svg" alt="*" srcset="" title="Cancel" class="md-icon">
+                                    <img src="../assets/icons/cancel.svg" alt="*" srcset="" title="Cancel" class="lg-icon">
                                 </span>
                             </td>
                         </tr>
@@ -295,7 +307,7 @@
                             <td class="editable">
                                 <span>Gasabo</span>
                                 <span class="icon-edit" onclick="openModel()">
-                                    <img src="../assets/icons/edit.svg" alt="*" srcset="" title="Edit" class="md-icon">
+                                    <img src="../assets/icons/edit.svg" alt="*" srcset="" title="Edit" class="lg-icon">
                                 </span>
                             </td>
                             <td>KK 19 Av</td>
@@ -309,7 +321,7 @@
                             <td class="status">
                                 <span>False</span>
                                 <span class="icon-cancel" onclick="cancelOrder(this)">
-                                    <img src="../assets/icons/dustbin.svg" alt="*" srcset="" title="Cancel" class="md-icon">
+                                    <img src="../assets/icons/cancel.svg" alt="*" srcset="" title="Cancel" class="lg-icon">
                                 </span>
                             </td>
                         </tr>
@@ -319,7 +331,7 @@
                             <td class="editable">
                                 <span>Gasabo</span>
                                 <span class="icon-edit" onclick="openModel()">
-                                    <img src="../assets/icons/edit.svg" alt="*" srcset="" title="Edit" class="md-icon">
+                                    <img src="../assets/icons/edit.svg" alt="*" srcset="" title="Edit" class="lg-icon">
                                 </span>
                             </td>
                             <td>KK 19 Av</td>
@@ -333,7 +345,7 @@
                             <td class="status">
                                 <span>False</span>
                                 <span class="icon-cancel" onclick="cancelOrder(this)">
-                                    <img src="../assets/icons/dustbin.svg" alt="*" srcset="" title="Cancel" class="md-icon">
+                                    <img src="../assets/icons/cancel.svg" alt="*" srcset="" title="Cancel" class="lg-icon">
                                 </span>
                             </td>
                         </tr>
@@ -343,7 +355,7 @@
                             <td class="editable">
                                 <span>Gasabo</span>
                                 <span class="icon-edit" onclick="openModel()">
-                                    <img src="../assets/icons/edit.svg" alt="*" srcset="" title="Edit" class="md-icon">
+                                    <img src="../assets/icons/edit.svg" alt="*" srcset="" title="Edit" class="lg-icon">
                                 </span>
                             </td>
                             <td>KK 19 Av</td>
@@ -357,7 +369,7 @@
                             <td class="status">
                                 <span>False</span>
                                 <span class="icon-cancel" onclick="cancelOrder(this)">
-                                    <img src="../assets/icons/dustbin.svg" alt="*" srcset="" class="md-icon" title="Cancel">
+                                    <img src="../assets/icons/cancel.svg" alt="*" srcset="" title="Cancel" class="lg-icon">
                                 </span>
                             </td>
                         </tr>
@@ -410,6 +422,7 @@
     </section>
     <!-- popup model javascript -->
     <script src="../js/model.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 
 </html>

@@ -307,6 +307,9 @@ button:hover.btn.btn-default {
 .side-nav .top .logo-container {
 	padding-top: 0.7em;
 }
+.side-nav .sidebar-links .nav-link img {
+	display: none;
+}
 .sidebar-links {
 	padding-top: 0.5em;
 	display: flex;
@@ -324,7 +327,9 @@ a.active {
 	font-size: 1em;
 	color: var(--royal-super-light-purple);
 }
-
+.sidebar-links a.logout {
+	visibility: hidden;
+}
 .down-link {
 	padding: 0.3em 0.5em;
 	margin: 0.5em 0.1em;
@@ -457,6 +462,9 @@ img.md-icon {
 img.lg-icon {
 	width: 1.5em !important;
 }
+img.xlg-icon {
+	width: 2.3em !important;
+}
 /*card stayls*/
 .lg-card {
 	box-shadow: 0 8px 20px 0 rgba(40, 37, 89, 0.6);
@@ -581,18 +589,32 @@ tr:nth-child(even) {
 }
 /* for small screen */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-	.col-3 {
+	/* .col-3 {
 		width: 50%;
-	}
+	} */
 	.side-nav {
+		display: inline-block;
+		width: 60px;
+	}
+	.side-nav .sidebar-links .nav-link span {
 		display: none;
 	}
+	.side-nav .sidebar-links .nav-link img {
+		display: block;
+	}
+	.sidebar-links a.logout {
+		visibility: visible;
+	}
+	.side-nav .down-link {
+		visibility: hidden;
+	}
 	.content {
-		margin-left: 5px; /* should reset */
+		margin-left: 80px; /* should reset */
 		margin-top: 80px; /* should be reset*/
 		padding: 0px;
 	}
 	.top-nav {
+		z-index: 2;
 		background: rgb(51, 46, 115);
 		background: linear-gradient(
 			90deg,
@@ -600,5 +622,8 @@ tr:nth-child(even) {
 			rgba(255, 255, 255, 1) 100%,
 			rgba(51, 46, 115, 1) 100%
 		);
+	}
+	.side-nav .top .logo-container {
+		visibility: hidden;
 	}
 }
