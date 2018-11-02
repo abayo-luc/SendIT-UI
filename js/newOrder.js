@@ -20,14 +20,11 @@ const nextOrPrev = action => {
 	switch (action) {
 		case "next":
 			orderForms[activeIndex + 1].classList.add("active");
-			steps.length > activeSteps.length &&
-				steps[activeSteps.length].classList.add("active");
+			steps[activeSteps.length].classList.add("active");
 			break;
 		case "prev":
 			orderForms[activeIndex - 1].classList.add("active");
-
-			steps.length > activeSteps.length &&
-				steps[activeSteps.length - 1].classList.remove("active");
+			steps[activeSteps.length - 1].classList.remove("active");
 		default:
 			return null;
 	}
